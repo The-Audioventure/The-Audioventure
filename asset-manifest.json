@@ -1,0 +1,35 @@
+{
+  "files": {
+    "app.js": "/ChooseYourOwnAudioventure/static/js/app.3454ec48.chunk.js",
+    "app.js.map": "/ChooseYourOwnAudioventure/static/js/app.3454ec48.chunk.js.map",
+    "runtime~app.js": "/ChooseYourOwnAudioventure/static/js/runtime~app.772d3914.js",
+    "runtime~app.js.map": "/ChooseYourOwnAudioventure/static/js/runtime~app.772d3914.js.map",
+    "static/js/2.eb130cfb.chunk.js": "/ChooseYourOwnAudioventure/static/js/2.eb130cfb.chunk.js",
+    "static/js/2.eb130cfb.chunk.js.map": "/ChooseYourOwnAudioventure/static/js/2.eb130cfb.chunk.js.map",
+    "fonts/AntDesign.ttf": "/ChooseYourOwnAudioventure/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/ChooseYourOwnAudioventure/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/ChooseYourOwnAudioventure/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/ChooseYourOwnAudioventure/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/ChooseYourOwnAudioventure/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/ChooseYourOwnAudioventure/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/ChooseYourOwnAudioventure/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/ChooseYourOwnAudioventure/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/ChooseYourOwnAudioventure/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/ChooseYourOwnAudioventure/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/ChooseYourOwnAudioventure/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/ChooseYourOwnAudioventure/./fonts/SimpleLineIcons.ttf",
+    "fonts/SpaceMono-Regular.ttf": "/ChooseYourOwnAudioventure/./fonts/SpaceMono-Regular.ttf",
+    "favicon-16.png": "/ChooseYourOwnAudioventure/favicon-16.png",
+    "favicon-32.png": "/ChooseYourOwnAudioventure/favicon-32.png",
+    "favicon.ico": "/ChooseYourOwnAudioventure/favicon.ico",
+    "index.html": "/ChooseYourOwnAudioventure/index.html",
+    "manifest.json": "/ChooseYourOwnAudioventure/manifest.json",
+    "serve.json": "/ChooseYourOwnAudioventure/serve.json",
+    "static/js/2.eb130cfb.chunk.js.LICENSE.txt": "/ChooseYourOwnAudioventure/static/js/2.eb130cfb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.772d3914.js",
+    "static/js/2.eb130cfb.chunk.js",
+    "static/js/app.3454ec48.chunk.js"
+  ]
+}
