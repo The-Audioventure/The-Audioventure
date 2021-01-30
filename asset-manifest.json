@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/Choose-Your-Own-Audioventure/static/js/app.93b81207.chunk.js",
-    "app.js.map": "/Choose-Your-Own-Audioventure/static/js/app.93b81207.chunk.js.map",
+    "app.js": "/Choose-Your-Own-Audioventure/static/js/app.1a208b3c.chunk.js",
+    "app.js.map": "/Choose-Your-Own-Audioventure/static/js/app.1a208b3c.chunk.js.map",
     "runtime~app.js": "/Choose-Your-Own-Audioventure/static/js/runtime~app.35fa3b74.js",
     "runtime~app.js.map": "/Choose-Your-Own-Audioventure/static/js/runtime~app.35fa3b74.js.map",
     "static/js/2.6abe22e4.chunk.js": "/Choose-Your-Own-Audioventure/static/js/2.6abe22e4.chunk.js",
@@ -11,11 +11,11 @@
     "manifest.json": "/Choose-Your-Own-Audioventure/manifest.json",
     "serve.json": "/Choose-Your-Own-Audioventure/serve.json",
     "static/js/2.6abe22e4.chunk.js.LICENSE.txt": "/Choose-Your-Own-Audioventure/static/js/2.6abe22e4.chunk.js.LICENSE.txt",
-    "static/media/examplebanner.gif": "/Choose-Your-Own-Audioventure/static/media/examplebanner.6a50cda5.gif"
+    "static/media/backgroundBanner.gif": "/Choose-Your-Own-Audioventure/static/media/backgroundBanner.e17a0abf.gif"
   },
   "entrypoints": [
     "static/js/runtime~app.35fa3b74.js",
     "static/js/2.6abe22e4.chunk.js",
-    "static/js/app.93b81207.chunk.js"
+    "static/js/app.1a208b3c.chunk.js"
   ]
 }
