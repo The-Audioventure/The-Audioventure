@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/Choose-Your-Own-Audioventure/static/js/app.11e3dfd3.chunk.js",
-    "app.js.map": "/Choose-Your-Own-Audioventure/static/js/app.11e3dfd3.chunk.js.map",
+    "app.js": "/Choose-Your-Own-Audioventure/static/js/app.bf5066da.chunk.js",
+    "app.js.map": "/Choose-Your-Own-Audioventure/static/js/app.bf5066da.chunk.js.map",
     "runtime~app.js": "/Choose-Your-Own-Audioventure/static/js/runtime~app.35fa3b74.js",
     "runtime~app.js.map": "/Choose-Your-Own-Audioventure/static/js/runtime~app.35fa3b74.js.map",
     "static/js/2.2fe21279.chunk.js": "/Choose-Your-Own-Audioventure/static/js/2.2fe21279.chunk.js",
@@ -16,6 +16,6 @@
   "entrypoints": [
     "static/js/runtime~app.35fa3b74.js",
     "static/js/2.2fe21279.chunk.js",
-    "static/js/app.11e3dfd3.chunk.js"
+    "static/js/app.bf5066da.chunk.js"
   ]
 }
