@@ -1,7 +1,7 @@
 {
   "display": "standalone",
   "lang": "en",
-  "name": "testTSX",
-  "short_name": "testTSX",
+  "name": "ChooseYourOwnAudioventure_JS",
+  "short_name": "ChooseYourOwnAudioventure_JS",
   "start_url": "/?utm_source=web_app_manifest"
 }
