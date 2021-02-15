@@ -1,36 +1,21 @@
 {
   "files": {
-    "app.js": "/Choose-Your-Own-Audioventure/static/js/app.ffe6d264.chunk.js",
-    "app.js.map": "/Choose-Your-Own-Audioventure/static/js/app.ffe6d264.chunk.js.map",
+    "app.js": "/Choose-Your-Own-Audioventure/static/js/app.b3d4d7aa.chunk.js",
+    "app.js.map": "/Choose-Your-Own-Audioventure/static/js/app.b3d4d7aa.chunk.js.map",
     "runtime~app.js": "/Choose-Your-Own-Audioventure/static/js/runtime~app.35fa3b74.js",
     "runtime~app.js.map": "/Choose-Your-Own-Audioventure/static/js/runtime~app.35fa3b74.js.map",
-    "static/js/2.60b7d807.chunk.js": "/Choose-Your-Own-Audioventure/static/js/2.60b7d807.chunk.js",
-    "static/js/2.60b7d807.chunk.js.map": "/Choose-Your-Own-Audioventure/static/js/2.60b7d807.chunk.js.map",
+    "static/js/2.85858eea.chunk.js": "/Choose-Your-Own-Audioventure/static/js/2.85858eea.chunk.js",
+    "static/js/2.85858eea.chunk.js.map": "/Choose-Your-Own-Audioventure/static/js/2.85858eea.chunk.js.map",
     "fonts/PressStart2P_400Regular.ttf": "/Choose-Your-Own-Audioventure/./fonts/PressStart2P_400Regular.ttf",
     "index.html": "/Choose-Your-Own-Audioventure/index.html",
     "manifest.json": "/Choose-Your-Own-Audioventure/manifest.json",
     "serve.json": "/Choose-Your-Own-Audioventure/serve.json",
-    "static/js/2.60b7d807.chunk.js.LICENSE.txt": "/Choose-Your-Own-Audioventure/static/js/2.60b7d807.chunk.js.LICENSE.txt",
-    "static/media/angryMetal.mp3": "/Choose-Your-Own-Audioventure/static/media/angryMetal.96fb8937.mp3",
-    "static/media/angryPuella.mp3": "/Choose-Your-Own-Audioventure/static/media/angryPuella.2601220a.mp3",
-    "static/media/backgroundBanner.gif": "/Choose-Your-Own-Audioventure/static/media/backgroundBanner.e17a0abf.gif",
-    "static/media/beachEvangelion.mp3": "/Choose-Your-Own-Audioventure/static/media/beachEvangelion.50f8c5cf.mp3",
-    "static/media/cloudsAnohana.mp3": "/Choose-Your-Own-Audioventure/static/media/cloudsAnohana.82eac9d8.mp3",
-    "static/media/happyFlipFlappers.mp3": "/Choose-Your-Own-Audioventure/static/media/happyFlipFlappers.ea7df661.mp3",
-    "static/media/homeSpiceWolf.mp3": "/Choose-Your-Own-Audioventure/static/media/homeSpiceWolf.5524f959.mp3",
-    "static/media/icyYuri.mp3": "/Choose-Your-Own-Audioventure/static/media/icyYuri.b803459a.mp3",
-    "static/media/jungleJojo.mp3": "/Choose-Your-Own-Audioventure/static/media/jungleJojo.7d982eac.mp3",
-    "static/media/lazySamuraiChamploo.mp3": "/Choose-Your-Own-Audioventure/static/media/lazySamuraiChamploo.9ed9f427.mp3",
-    "static/media/partyDeathParade.mp3": "/Choose-Your-Own-Audioventure/static/media/partyDeathParade.4be7bea1.mp3",
-    "static/media/pumpedOnePiece.mp3": "/Choose-Your-Own-Audioventure/static/media/pumpedOnePiece.06b99902.mp3",
-    "static/media/romanticSakura.mp3": "/Choose-Your-Own-Audioventure/static/media/romanticSakura.7229762a.mp3",
-    "static/media/sadTokyoGhoul.mp3": "/Choose-Your-Own-Audioventure/static/media/sadTokyoGhoul.10d045ca.mp3",
-    "static/media/volcanoReZero.mp3": "/Choose-Your-Own-Audioventure/static/media/volcanoReZero.552145b1.mp3",
-    "static/media/weirdMintOrange.mp3": "/Choose-Your-Own-Audioventure/static/media/weirdMintOrange.9aa53a77.mp3"
+    "static/js/2.85858eea.chunk.js.LICENSE.txt": "/Choose-Your-Own-Audioventure/static/js/2.85858eea.chunk.js.LICENSE.txt",
+    "static/media/backgroundBanner.gif": "/Choose-Your-Own-Audioventure/static/media/backgroundBanner.e17a0abf.gif"
   },
   "entrypoints": [
     "static/js/runtime~app.35fa3b74.js",
-    "static/js/2.60b7d807.chunk.js",
-    "static/js/app.ffe6d264.chunk.js"
+    "static/js/2.85858eea.chunk.js",
+    "static/js/app.b3d4d7aa.chunk.js"
   ]
 }
