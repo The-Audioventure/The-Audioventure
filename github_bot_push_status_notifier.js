@@ -1,9 +1,11 @@
-require('dotenv').config();
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const TOKEN = process.env.TOKEN;
+const args = require('minimist')(process.argv.slice(2))
 
+const TOKEN = args['TOKEN'];
+console.log(TOKEN)
 const { exec } = require('child_process');
 
 bot.on('ready', () => {
