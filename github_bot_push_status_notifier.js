@@ -11,16 +11,24 @@ bot.on('ready', () => {
     exec('yarn test', (err, stdout, stderr) => {
         if (err) {
             console.info(`Logged in as ${bot.user.tag}!`);
-            bot.channels.cache.get('812771488238665728').send('Push Sent to Github Resulted in an Error');
+            const channel = bot.channels.cache.get('812771488238665728');
+            channel.send('Push Sent to Github Resulted in an Error');
+            channel.send(stderr);
+            console.log(stdout)
+            console.log(stderr)
             setTimeout(function() {process.exit(1);
-            }, 1000);
+            }, 2000);
           return;
         }
         else {
             console.info(`Logged in as ${bot.user.tag}!`);
-            bot.channels.cache.get('812771488238665728').send('Push Sent to Github Resulted in a Success');
+            const channel = bot.channels.cache.get('812771488238665728');
+            channel.send('Push Sent to Github Resulted in a Success');
+            channel.send(stdout);
+            console.log(stdout)
+            console.log(stderr)
             setTimeout(function() {process.exit(0);
-            }, 1000);
+            }, 2000);
         }
     });
 });
