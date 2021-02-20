@@ -12,7 +12,7 @@ bot.on('ready', () => {
         if (err) {
             console.info(`Logged in as ${bot.user.tag}!`);
             const channel = bot.channels.cache.get('812771488238665728');
-            channel.send('Push Sent to Github Resulted in an Error');
+            channel.send('@Yahtzee (Yahiya)#3431 Push Sent to Github Resulted in an Error:');
             channel.send(stderr);
             console.log(stdout)
             console.log(stderr)
@@ -23,7 +23,7 @@ bot.on('ready', () => {
         else {
             console.info(`Logged in as ${bot.user.tag}!`);
             const channel = bot.channels.cache.get('812771488238665728');
-            channel.send('Push Sent to Github Resulted in a Success');
+            channel.send('@Yahtzee (Yahiya)#3431 Push Sent to Github Resulted in a Success:');
             channel.send(stdout);
             console.log(stdout)
             console.log(stderr)
