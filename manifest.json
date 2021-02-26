@@ -1,7 +1,7 @@
 {
   "display": "standalone",
   "lang": "en",
-  "name": "ChooseYourOwnAudioventure_V2_JS",
-  "short_name": "ChooseYourOwnAudioventure_V2_JS",
+  "name": "ChooseYourOwnAudioventure_V3",
+  "short_name": "ChooseYourOwnAudioventure_V3",
   "start_url": "/?utm_source=web_app_manifest"
 }
