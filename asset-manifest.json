@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/Choose-Your-Own-Audioventure/static/js/app.81ce0da2.chunk.js",
-    "app.js.map": "/Choose-Your-Own-Audioventure/static/js/app.81ce0da2.chunk.js.map",
+    "app.js": "/Choose-Your-Own-Audioventure/static/js/app.97a36fc5.chunk.js",
+    "app.js.map": "/Choose-Your-Own-Audioventure/static/js/app.97a36fc5.chunk.js.map",
     "runtime~app.js": "/Choose-Your-Own-Audioventure/static/js/runtime~app.35fa3b74.js",
     "runtime~app.js.map": "/Choose-Your-Own-Audioventure/static/js/runtime~app.35fa3b74.js.map",
-    "static/js/2.94f618cf.chunk.js": "/Choose-Your-Own-Audioventure/static/js/2.94f618cf.chunk.js",
-    "static/js/2.94f618cf.chunk.js.map": "/Choose-Your-Own-Audioventure/static/js/2.94f618cf.chunk.js.map",
+    "static/js/2.258ece4c.chunk.js": "/Choose-Your-Own-Audioventure/static/js/2.258ece4c.chunk.js",
+    "static/js/2.258ece4c.chunk.js.map": "/Choose-Your-Own-Audioventure/static/js/2.258ece4c.chunk.js.map",
     "fonts/AntDesign.ttf": "/Choose-Your-Own-Audioventure/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/Choose-Your-Own-Audioventure/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/Choose-Your-Own-Audioventure/./fonts/Feather.ttf",
@@ -22,11 +22,11 @@
     "index.html": "/Choose-Your-Own-Audioventure/index.html",
     "manifest.json": "/Choose-Your-Own-Audioventure/manifest.json",
     "serve.json": "/Choose-Your-Own-Audioventure/serve.json",
-    "static/js/2.94f618cf.chunk.js.LICENSE.txt": "/Choose-Your-Own-Audioventure/static/js/2.94f618cf.chunk.js.LICENSE.txt"
+    "static/js/2.258ece4c.chunk.js.LICENSE.txt": "/Choose-Your-Own-Audioventure/static/js/2.258ece4c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.35fa3b74.js",
-    "static/js/2.94f618cf.chunk.js",
-    "static/js/app.81ce0da2.chunk.js"
+    "static/js/2.258ece4c.chunk.js",
+    "static/js/app.97a36fc5.chunk.js"
   ]
 }
