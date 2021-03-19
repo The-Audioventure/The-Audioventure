@@ -11,6 +11,7 @@ const styles = (props) => StyleSheet.create({
         resizeMode: "center",
         backgroundColor: 'black',
         overflow: 'hidden',
+         
     }
 });
 
@@ -20,7 +21,7 @@ export default class StyledBackground extends React.Component {
         // console.log(this.props);
 
         return (
-            <ImageBackground style={style.style} source={this.props.image}> 
+            <ImageBackground  resizeMode='contain' style={style.style} source={this.props.image}> 
                 {this.props.children}
             </ImageBackground>
         )

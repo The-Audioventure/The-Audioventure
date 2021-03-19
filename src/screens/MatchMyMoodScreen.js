@@ -53,6 +53,8 @@ const MatchMyMoodScreen = ({navigation}) => {
 
     const ICON_SIZE = 180;
 
+    
+
     const imageDim = {height: AppConstants.BACKGROUND_IMAGE_HEIGHT, width: AppConstants.BACKGROUND_IMAGE_WIDTH};
     const scaledImageDim = utilities.calculate_scaledImageDim(windowDim, imageDim);
     const scaledButtonBorderWidth = scaledImageDim.scalingRatio * AppConstants.BUTTON_BORDER_WIDTH;
@@ -100,7 +102,7 @@ const MatchMyMoodScreen = ({navigation}) => {
     return (
         <ViewContainer color='black' height='100%' width='100%' >
             <StyledBackground 
-                image={AppConstants.BACKGROUND_IMAGE} 
+                image={AppConstants.HomeScreenImage.src.uri} 
                 height={scaledImageDim.height}
                 width={scaledImageDim.width}>
                 {icons}

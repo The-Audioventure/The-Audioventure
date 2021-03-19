@@ -52,6 +52,9 @@ const TakeMeSomewhere = ({navigation}) => {
     return <AppLoading />;
     }
 
+    const HEIGHT = AppConstants.HomeScreenImage.height;
+    const WIDTH = AppConstants.HomeScreenImage.width;
+
     const ICON_SIZE = 180;
 
     const imageDim = {height: AppConstants.BACKGROUND_IMAGE_HEIGHT, width: AppConstants.BACKGROUND_IMAGE_WIDTH};
@@ -101,7 +104,7 @@ const TakeMeSomewhere = ({navigation}) => {
     return (
         <ViewContainer color='black' height='100%' width='100%' >
             <StyledBackground 
-                image={AppConstants.BACKGROUND_IMAGE} 
+                image={AppConstants.HomeScreenImage.src.uri} 
                 height={scaledImageDim.height}
                 width={scaledImageDim.width}>
                 {icons}

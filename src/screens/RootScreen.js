@@ -9,6 +9,7 @@ import utilities from '../utilities'
 import TextBanner from "../components/TextBanner";
 import AppConstants from "../AppConstants"
 
+
 class FirstScreen extends React.Component {
     constructor(props) {
         super(props);
@@ -19,17 +20,15 @@ class FirstScreen extends React.Component {
       title: 'First',
     }
     componentDidMount(){
-        // console.log(this.props.props.navigation)
-      const {navigate} = this.props.props.navigation;
-      navigate('Home');
-    //   fetch('http://apiserver').then( (response) => {
-    //     navigate('Second');
-    //   });
     }
     render() {
+      const {navigate} = this.props.props.navigation;
+      navigate('Home');
+
       return (
         <AppLoading />
       );
+      
     }
   }
 

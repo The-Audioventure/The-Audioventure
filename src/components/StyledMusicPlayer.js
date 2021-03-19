@@ -155,7 +155,7 @@ export default class StyledMusicPlayer extends React.Component {
             return;
         } else if (playbackInstance) {
           await playbackInstance.unloadAsync()
-          currentIndex < this.props.playlist.length - 1 ? (currentIndex -= 1) : (currentIndex = 0)
+          currentIndex > 0 ? (currentIndex -= 1) : (currentIndex = 0)
           this.setState({
             currentIndex
           })
@@ -169,6 +169,7 @@ export default class StyledMusicPlayer extends React.Component {
         this.onPlayPause_dispatchSideEffects(true);
       }
     
+
     handleNextTrack = async () => {
         
         let { playbackInstance, currentIndex, isPlaying} = this.state
@@ -245,7 +246,7 @@ export default class StyledMusicPlayer extends React.Component {
                         width='100%'
                         borderWidth={this.props.bannerBorderWidth}
                         corners
-                        noBackground
+                        // noBackground
                     >
                         <FlatList
                             ref={(ref) => {this.state.flatListRef = ref}}
@@ -260,7 +261,9 @@ export default class StyledMusicPlayer extends React.Component {
                                         height='100%' 
                                         width='100%' 
                                         corners
-                                        noBorder>
+                                        noBorder
+                                        noBackground>
+                                            
                                     <TouchableOpacity 
                                         onPress={() => {
                                             this.handleSongButton(item.name)}}>
@@ -270,13 +273,16 @@ export default class StyledMusicPlayer extends React.Component {
                                                 horizontal
                                                 showsHorizontalScrollIndicator={false}
                                                 nestedScrollEnabled 
+                                                contentContainerStyle={{backgroundColor: 'clear'}}
+                                                
+                                                
                                             >   
-                                                <View><Text style={this.props.fontStyle(this.props.subtitleFontSize, this.props.subtitleLineHeight, 'flex-start', this.props.subtitleFontSize/2).style}
+                                                <View><Text style={this.props.fontStyle(this.props.subtitleFontSize, this.props.subtitleLineHeight, 'flex-start', this.props.subtitleFontSize/2, "Tinos_400Regular").style}
                                                 >{item.name} / {item.artist}</Text></View>
                                                
                                             </ScrollView>
                                             <ScrollView>
-                                                <View><Text style={this.props.fontStyle(this.props.titleFontSize, this.props.titleLineHeight, 'center', 0).style}
+                                                <View><Text style={this.props.fontStyle(this.props.titleFontSize, this.props.titleLineHeight, 'center', 0, "PressStart2P_400Regular").style}
                                                 >--------------</Text></View>                                            
                                             </ScrollView>
                                             
