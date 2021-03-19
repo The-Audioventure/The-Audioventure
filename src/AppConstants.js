@@ -9,7 +9,7 @@ const AppConstants = {
 
     // HomeScreenImage: {height: 2880, width: 5120, src: getUri("031_cover_noword.png")},
     HomeScreenImage: {height: 2880, width: 5120, src: {uri: "https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/031_cover_noword.png?token=AIGD4GKSBNO4H24F2L7M2JDALJC2Y"}},
-
+    // HomeScreenImage: {height: 2880, width: 5120, src: {uri: require('./assets/031_cover_noword.png')}},
     themeImage: {
         Sad: {height: 2880, width: 5120, src: getUri("028_sad1.png")},
         Pumped: {height: 2880, width: 5120, src: getUri("032_pumped.png")},
@@ -51,18 +51,6 @@ const AppConstants = {
     },
 
     themePlaylists: {
-        Anime: [
-            { name: 'Mario Coin', artist: "Uhh", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/Mario-coin-sound.mp3"}},
-            { name: 'Linked Horizon', artist: "Revo", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/LinkedHorizon.mp3"}},
-            { name: 'Let Me Hear', artist: "Fear and Loathing in Las Vegas", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/LetMeHear.mp3"} },
-            { name: 'Heavenly Blue', artist: "Hiroyuki Sawano", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/HeavenlyBlue.mp3"}},
-            { name: 'The World', artist: "Yutaka Yamada", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/TheWorld.mp3"}},
-            { name: 'Sono Chi No Sadame', artist: "Bluff", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/SonoChiNoSadame.mp3"}},
-            { name: 'Unravel', artist: "Toru Kitajima", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/Unravel.mp3"}},
-            { name: 'Magia', artist: "Kalafina", track: { uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/angryPuella.mp3"}},
-            { name: 'Papermoon', artist: "Tomoko Kawase", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/Papermoon.mp3"}},
-            { name: 'Clattanoia', artist: "OxT", track: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/Clattanoia.mp3"}}
-        ],
         Beach: [
             { name: 'Limonada Fria', artist: "FutureYou", track: getUri("FutureYou_Limonada%20Fria.wav")},
             { name: 'Verano En Playa Azul', artist: "Michelle Lugo", track: getUri("Michelle_VeranoEnPlayaAzul.wav")},
@@ -73,7 +61,6 @@ const AppConstants = {
     },
 
 
-    BACKGROUND_IMAGE: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/backgroundBanner.gif" },
     BACKGROUND_IMAGE_HEIGHT: 867,
     BACKGROUND_IMAGE_WIDTH: 1542,
     BUTTON_BORDER_WIDTH: 7,

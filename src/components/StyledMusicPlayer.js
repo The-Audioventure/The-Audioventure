@@ -5,14 +5,10 @@ import AppLoading from 'expo-app-loading';
 import {useFonts, PressStart2P_400Regular} from '@expo-google-fonts/press-start-2p'
 import React, {useState, useReducer} from 'react';
 import ViewContainer from "../components/ViewContainer";
-import StyledBackground from "../components/StyledBackground"
-import utilities from '../utilities'
 import TextBanner from "../components/TextBanner";
 import AppConstants from "../AppConstants"
 import { FlatList } from "react-native-gesture-handler";
 import Banner from "../components/Banner";
-// import MusicBox from "../MusicBox"
-import StaticMusicBox from "../StaticMusicBox"
 import { AntDesign , Ionicons } from '@expo/vector-icons';
 import { Audio } from 'expo-av';
 

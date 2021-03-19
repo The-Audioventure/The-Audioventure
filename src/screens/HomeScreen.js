@@ -29,7 +29,7 @@ const HomeScreen = ({navigation}) => {
     // console.log(Object.keys(AppConstants.icons));
     const [assets] = useAssets([
         
-        AppConstants.HomeScreenImage.src.uri,
+        // AppConstants.HomeScreenImage.src.uri,
         AppConstants.themeImage.Beach.src.uri,
         ...icon_uris,
         ...beachSong_uris,
@@ -37,11 +37,11 @@ const HomeScreen = ({navigation}) => {
       ]);
     if (!fontsLoaded && !assets) {
         return <ViewContainer color='black' height='100%' width='100%' >
-            <Image
+            {/* <Image
                 source={require('../assets/loading.gif')}
                 style={{flex:1, aspectRatio: 2,height:'100%', width:'100%'}}
                 resizeMode='contain'
-            ></Image>
+            ></Image> */}
         </ViewContainer>
     }
 
