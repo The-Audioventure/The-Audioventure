@@ -1,17 +1,7 @@
 import React from "react";
-import {
-  Animated,
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  ShadowPropTypesIOS,
-  ImageBackground,
-} from "react-native";
+import { Animated, StyleSheet, ImageBackground } from "react-native";
 // import Animated from 'react-native-reanimated';
-import PropTypes from "prop-types";
 import AppConstants from "../AppConstants";
-import { random } from "underscore";
 
 const imageStyles = (props) =>
   StyleSheet.create({

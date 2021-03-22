@@ -1,26 +1,50 @@
 const GOOGLE_DOCS_TEXT_CONVERSION_RATIO = 2;
 
-const getUri = function (fileName) {
+type url = string;
+
+type uri = {
+  uri: url;
+};
+
+type uriGenerator = (fileName: string) => uri;
+type urlGenerator = (fileName: string) => url;
+
+type colorTheme = {
+  text: string;
+  border: string;
+  background: string;
+};
+
+const getUri: uriGenerator = (fileName: string) => {
   return {
     uri: `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`,
   };
 };
-const getUrl = function (fileName) {
+
+const getUrl: urlGenerator = (fileName: string) => {
   return `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`;
 };
 
-const getRawUri = function (fileName) {
+const getRawUri: uriGenerator = (fileName: string) => {
   return {
     uri: `https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/${fileName}?token=AIGD4GLECBA4H6NRZGA2ZB3AL2CYQ`,
   };
 };
 
-const getRawurl = function (fileName) {
+const getRawurl: urlGenerator = (fileName: string) => {
   return `https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/${fileName}?token=AIGD4GLECBA4H6NRZGA2ZB3AL2CYQ`;
 };
 
-const createColorTheme = function (textColor, borderColor, backgroundColor) {
-  return { text: textColor, border: borderColor, background: backgroundColor };
+const createColorTheme = (
+  textColor: string,
+  borderColor: string,
+  backgroundColor: string
+): colorTheme => {
+  return {
+    text: textColor,
+    border: borderColor,
+    background: backgroundColor,
+  };
 };
 
 const AppConstants = {
@@ -52,6 +76,7 @@ const AppConstants = {
     Happy: { height: 2880, width: 5120, src: getUri("046_happy_nosign.png") },
     Lazy: { height: 2880, width: 5120, src: getUri("047_lazy_nosign.png") },
   },
+
   themeColors: {
     Home: createColorTheme("#ffffff", "#b4a7d6", "#8e7cc380"),
     Pumped: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
@@ -60,7 +85,6 @@ const AppConstants = {
     Weird: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
     Sad: createColorTheme("#f3f3f3", "#efefef", "#6666665e"),
     Romantic: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
-    Home: createColorTheme("#fce5cd", "#f9cb9c", "#783f045e"),
     Cloudy: createColorTheme("#c9daf8", "#a4c2f4", "#1c458760"),
     Beach: createColorTheme("#cfe2f3", "#9fc5e8", "#0737635e"),
     Party: createColorTheme("#d9d2e9", "#b4a7d6", "#20124d5f"),
