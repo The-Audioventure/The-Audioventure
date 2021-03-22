@@ -1,19 +1,30 @@
 import React from "react";
 import {
   Animated,
-  View,
-  Text,
   StyleSheet,
-  Image,
-  ShadowPropTypesIOS,
   ImageBackground,
+  ImageURISource,
 } from "react-native";
 // import Animated from 'react-native-reanimated';
-import PropTypes from "prop-types";
 import AppConstants from "../AppConstants";
-import { random } from "underscore";
 
-const imageStyles = (props) =>
+type StyledBackgroundProps = {
+  image: ImageURISource;
+  height: number;
+  width: number;
+  cycling?: boolean;
+  cycleTheme?: string;
+  setBackground?: any;
+  cycleOffset: number;
+  position:
+    | Animated.Value
+    | Animated.AnimatedInterpolation
+    | "absolute"
+    | "relative"
+    | undefined;
+};
+
+const imageStyles = (props: StyledBackgroundProps) =>
   StyleSheet.create({
     style: {
       justifyContent: "center",
@@ -26,17 +37,18 @@ const imageStyles = (props) =>
     },
   });
 
-export default class StyledBackground extends React.Component {
+export default class StyledBackground extends React.Component<StyledBackgroundProps> {
   state = {
     fadeAnimation: new Animated.Value(0),
     cycleIndex: 0,
   };
 
   fadeIn = () => {
-    Animated.timing(this.state.fadeAnimation, {
+    const config = {
       toValue: 1,
       duration: 500,
-    }).start(({ finished }) => {
+    } as Animated.TimingAnimationConfig;
+    Animated.timing(this.state.fadeAnimation, config).start(({ finished }) => {
       if (finished && this.props.cycling) {
         this.fadeOut(4000 + Math.floor(this.props.cycleOffset * Math.random()));
       }
@@ -44,12 +56,13 @@ export default class StyledBackground extends React.Component {
   };
 
   fadeOut = (delay = 0) => {
-    Animated.timing(this.state.fadeAnimation, {
+    const config = {
       toValue: 0,
       delay: delay,
       duration: 500,
-    }).start(({ finished }) => {
-      if (finished && this.props.cycling) {
+    } as Animated.TimingAnimationConfig;
+    Animated.timing(this.state.fadeAnimation, config).start(({ finished }) => {
+      if (finished && this.props.cycling && this.props.setBackground) {
         if (this.props.cycleTheme === "Mood") {
           var themes_array = Object.keys(AppConstants.moodThemes);
         } else if (this.props.cycleTheme === "Place") {
@@ -70,7 +83,14 @@ export default class StyledBackground extends React.Component {
         const THEME = themes_array[rand_index];
         console.log(AppConstants.themeImage, THEME, themes_array, rand_index);
 
-        this.props.setBackground(AppConstants.themeImage[THEME].src.uri);
+        if (
+          AppConstants.themeImage &&
+          AppConstants.themeImage[THEME] &&
+          AppConstants.themeImage[THEME].src &&
+          AppConstants.themeImage[THEME].src.uri
+        ) {
+          this.props.setBackground(AppConstants.themeImage[THEME].src.uri);
+        }
         this.fadeIn();
         this.setState({ cycleIndex: rand_index });
       }

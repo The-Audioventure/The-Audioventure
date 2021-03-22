@@ -1,29 +1,109 @@
+import { ImageURISource } from "react-native";
+
 const GOOGLE_DOCS_TEXT_CONVERSION_RATIO = 2;
 
-const getUri = function (fileName) {
+type Url = string;
+
+type Icon = { uri: Url; name: string };
+
+type UriGenerator = (fileName: string) => { uri: string };
+type UrlGenerator = (fileName: string) => Url;
+
+type ColorTheme = {
+  text: string;
+  border: string;
+  background: string;
+};
+
+type Image = {
+  height: number;
+  width: number;
+  src: { uri: string };
+};
+
+type Playlist = {
+  name: string;
+  artist: string;
+  track: ImageURISource;
+};
+
+type Constants = {
+  HomeScreenImage: Image;
+  themeImage: {
+    [key: string]: Image;
+  };
+  themeColors: {
+    [key: string]: ColorTheme;
+  };
+  themeTitleNames: {
+    [key: string]: string;
+  };
+  themeTitleBoxSize: {
+    [key: string]: string;
+  };
+  moodThemes: {
+    [key: string]: string;
+  };
+  placeThemes: {
+    [key: string]: string;
+  };
+  themes: {
+    [key: string]: string;
+  };
+  icons: {
+    [key: string]: Icon;
+  };
+  themePlaylists: {
+    [key: string]: Playlist[];
+  };
+};
+
+type Numerics = {
+  BACKGROUND_IMAGE_HEIGHT: number;
+  BACKGROUND_IMAGE_WIDTH: number;
+  BUTTON_BORDER_WIDTH: number;
+  GOOGLE_DOCS_TEXT_CONVERSION_RATIO: number;
+  TILE_FONT_SIZE: number;
+  SUBTITLE_FONT_SIZE: number;
+  CLOUDS_TITLE_FONT_SIZE: number;
+  CLICK_FONT_SIZE: number;
+  ENTRY_FONT_SIZE: number;
+  LINE_SPACING: number;
+};
+
+const getUri: UriGenerator = (fileName: string) => {
   return {
     uri: `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`,
   };
 };
-const getUrl = function (fileName) {
+
+const getUrl: UrlGenerator = (fileName: string) => {
   return `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`;
 };
 
-const getRawUri = function (fileName) {
+const getRawUri: UriGenerator = (fileName: string) => {
   return {
     uri: `https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/${fileName}?token=AIGD4GLECBA4H6NRZGA2ZB3AL2CYQ`,
   };
 };
 
-const getRawurl = function (fileName) {
+const getRawurl: UrlGenerator = (fileName: string) => {
   return `https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/${fileName}?token=AIGD4GLECBA4H6NRZGA2ZB3AL2CYQ`;
 };
 
-const createColorTheme = function (textColor, borderColor, backgroundColor) {
-  return { text: textColor, border: borderColor, background: backgroundColor };
+const createColorTheme = (
+  textColor: string,
+  borderColor: string,
+  backgroundColor: string
+): ColorTheme => {
+  return {
+    text: textColor,
+    border: borderColor,
+    background: backgroundColor,
+  };
 };
 
-const AppConstants = {
+const AppConstants: Constants & Numerics = {
   // HomeScreenImage: {height: 2880, width: 5120, src: getUri("031_cover_noword.png")},
   HomeScreenImage: {
     height: 2880,
@@ -52,6 +132,7 @@ const AppConstants = {
     Happy: { height: 2880, width: 5120, src: getUri("046_happy_nosign.png") },
     Lazy: { height: 2880, width: 5120, src: getUri("047_lazy_nosign.png") },
   },
+
   themeColors: {
     Home: createColorTheme("#ffffff", "#b4a7d6", "#8e7cc380"),
     Pumped: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
@@ -60,7 +141,6 @@ const AppConstants = {
     Weird: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
     Sad: createColorTheme("#f3f3f3", "#efefef", "#6666665e"),
     Romantic: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
-    Home: createColorTheme("#fce5cd", "#f9cb9c", "#783f045e"),
     Cloudy: createColorTheme("#c9daf8", "#a4c2f4", "#1c458760"),
     Beach: createColorTheme("#cfe2f3", "#9fc5e8", "#0737635e"),
     Party: createColorTheme("#d9d2e9", "#b4a7d6", "#20124d5f"),

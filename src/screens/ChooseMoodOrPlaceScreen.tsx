@@ -1,16 +1,4 @@
-import {
-  Animated,
-  Text,
-  Image,
-  StyleSheet,
-  View,
-  Button,
-  TouchableOpacity,
-  ImagePropTypes,
-  Touchable,
-  ImageBackground,
-  ScaledSize,
-} from "react-native";
+import { TouchableOpacity } from "react-native";
 import { Dimensions } from "react-native";
 import AppLoading from "expo-app-loading";
 import {
@@ -23,9 +11,11 @@ import StyledBackground from "../components/StyledBackground";
 import utilities from "../utilities";
 import TextBanner from "../components/TextBanner";
 import AppConstants from "../AppConstants";
-import random from "underscore";
-// import { SliderBox } from "react-native-image-slider-box";
-const ChooseMoodOrPlace = ({ navigation }) => {
+import { NavigationStackScreenProps } from "react-navigation-stack";
+
+const ChooseMoodOrPlace = (props: NavigationStackScreenProps): JSX.Element => {
+  const navigation = props.navigation;
+
   // keep the known window dimensions up to date amidst resize
   const [windowDim, setWindow] = useState(Dimensions.get("window"));
   window.addEventListener("resize", () => setWindow(Dimensions.get("window")));
@@ -38,10 +28,10 @@ const ChooseMoodOrPlace = ({ navigation }) => {
   const mood_rand_index = Math.floor(Math.random() * moodThemes_array.length);
 
   const [moodBackground, setMoodBackground] = useState(
-    AppConstants.themeImage[placeThemes_array[place_rand_index]].src.uri
+    AppConstants.themeImage[placeThemes_array[place_rand_index]].src
   );
   const [placeBackground, setPlaceBackground] = useState(
-    AppConstants.themeImage[moodThemes_array[mood_rand_index]].src.uri
+    AppConstants.themeImage[moodThemes_array[mood_rand_index]].src
   );
 
   // load in the font for usage
