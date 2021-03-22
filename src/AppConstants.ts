@@ -1,37 +1,95 @@
 const GOOGLE_DOCS_TEXT_CONVERSION_RATIO = 2;
 
-type url = string;
+type Url = string;
 
-type uri = {
-  uri: url;
+type Uri = {
+  uri: Url;
 };
 
-type uriGenerator = (fileName: string) => uri;
-type urlGenerator = (fileName: string) => url;
+type Icon = Uri & { name: string };
 
-type colorTheme = {
+type UriGenerator = (fileName: string) => Uri;
+type UrlGenerator = (fileName: string) => Url;
+
+type ColorTheme = {
   text: string;
   border: string;
   background: string;
 };
 
-const getUri: uriGenerator = (fileName: string) => {
+type Image = {
+  height: number;
+  width: number;
+  src: Uri;
+};
+
+type Playlist = {
+  name: string;
+  artist: string;
+  track: Uri;
+};
+
+type Constants = {
+  HomeScreenImage: Image;
+  themeImage: {
+    [key: string]: Image;
+  };
+  themeColors: {
+    [key: string]: ColorTheme;
+  };
+  themeTitleNames: {
+    [key: string]: string;
+  };
+  themeTitleBoxSize: {
+    [key: string]: string;
+  };
+  moodThemes: {
+    [key: string]: string;
+  };
+  placeThemes: {
+    [key: string]: string;
+  };
+  themes: {
+    [key: string]: string;
+  };
+  icons: {
+    [key: string]: Icon;
+  };
+  themePlaylists: {
+    [key: string]: Playlist[];
+  };
+};
+
+type Numerics = {
+  BACKGROUND_IMAGE_HEIGHT: number;
+  BACKGROUND_IMAGE_WIDTH: number;
+  BUTTON_BORDER_WIDTH: number;
+  GOOGLE_DOCS_TEXT_CONVERSION_RATIO: number;
+  TILE_FONT_SIZE: number;
+  SUBTITLE_FONT_SIZE: number;
+  CLOUDS_TITLE_FONT_SIZE: number;
+  CLICK_FONT_SIZE: number;
+  ENTRY_FONT_SIZE: number;
+  LINE_SPACING: number;
+};
+
+const getUri: UriGenerator = (fileName: string) => {
   return {
     uri: `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`,
   };
 };
 
-const getUrl: urlGenerator = (fileName: string) => {
+const getUrl: UrlGenerator = (fileName: string) => {
   return `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`;
 };
 
-const getRawUri: uriGenerator = (fileName: string) => {
+const getRawUri: UriGenerator = (fileName: string) => {
   return {
     uri: `https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/${fileName}?token=AIGD4GLECBA4H6NRZGA2ZB3AL2CYQ`,
   };
 };
 
-const getRawurl: urlGenerator = (fileName: string) => {
+const getRawurl: UrlGenerator = (fileName: string) => {
   return `https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/${fileName}?token=AIGD4GLECBA4H6NRZGA2ZB3AL2CYQ`;
 };
 
@@ -39,7 +97,7 @@ const createColorTheme = (
   textColor: string,
   borderColor: string,
   backgroundColor: string
-): colorTheme => {
+): ColorTheme => {
   return {
     text: textColor,
     border: borderColor,
@@ -47,7 +105,7 @@ const createColorTheme = (
   };
 };
 
-const AppConstants = {
+const AppConstants: Constants & Numerics = {
   // HomeScreenImage: {height: 2880, width: 5120, src: getUri("031_cover_noword.png")},
   HomeScreenImage: {
     height: 2880,
