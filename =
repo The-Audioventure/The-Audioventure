@@ -1,0 +1,5 @@
+Installing 1 SDK 40.0.0 compatible native module and 1 other package using Yarn.
+> yarn add @react-native-community/masked-view@0.1.10 0.1.0
+yarn add v1.22.10
+[1/4] Resolving packages...
+info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this command.

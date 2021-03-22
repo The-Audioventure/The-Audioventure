@@ -1,74 +1,175 @@
-const GOOGLE_DOCS_TEXT_CONVERSION_RATIO =  2.14285714;
+const GOOGLE_DOCS_TEXT_CONVERSION_RATIO = 2;
 
-const getUri = function(fileName) {
-    
-    return {uri: `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`}
-}
+const getUri = function (fileName) {
+  return {
+    uri: `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`,
+  };
+};
+const getUrl = function (fileName) {
+  return `https://yahtzeerage.github.io/CYOA-Assets/assets/${fileName}`;
+};
+
+const getRawUri = function (fileName) {
+  return {
+    uri: `https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/${fileName}?token=AIGD4GLECBA4H6NRZGA2ZB3AL2CYQ`,
+  };
+};
+
+const getRawurl = function (fileName) {
+  return `https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/${fileName}?token=AIGD4GLECBA4H6NRZGA2ZB3AL2CYQ`;
+};
+
+const createColorTheme = function (textColor, borderColor, backgroundColor) {
+  return { text: textColor, border: borderColor, background: backgroundColor };
+};
 
 const AppConstants = {
-
-    // HomeScreenImage: {height: 2880, width: 5120, src: getUri("031_cover_noword.png")},
-    HomeScreenImage: {height: 2880, width: 5120, src: {uri: "https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/031_cover_noword.png?token=AIGD4GKSBNO4H24F2L7M2JDALJC2Y"}},
-    // HomeScreenImage: {height: 2880, width: 5120, src: {uri: require('./assets/031_cover_noword.png')}},
-    themeImage: {
-        Sad: {height: 2880, width: 5120, src: getUri("028_sad1.png")},
-        Pumped: {height: 2880, width: 5120, src: getUri("032_pumped.png")},
-        Cloudy: {height: 2880, width: 5120, src: getUri("034_cloud.png")},
-        Romantic: {height: 2880, width: 5120, src: getUri("036_romantic.png")},
-        Icy: {height: 2880, width: 5120, src: getUri("038_snow.png")},
-        Party: {height: 2880, width: 5120, src: getUri("039_party.png")},
-        Beach: {height: 2880, width: 5120, src: getUri("042_beach.png")},
-        Weird: {height: 2880, width: 5120, src: getUri("043_weirdagain.png")},
-        Home: {height: 2880, width: 5120, src: getUri("044_home.png")},
-        Space: {height: 2880, width: 5120, src: getUri("045_space.png")},
-        Happy: {height: 2880, width: 5120, src: getUri("046_happy.png")},
+  // HomeScreenImage: {height: 2880, width: 5120, src: getUri("031_cover_noword.png")},
+  HomeScreenImage: {
+    height: 2880,
+    width: 5120,
+    src: {
+      uri:
+        "https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/031_cover_noword.png?token=AIGD4GKSBNO4H24F2L7M2JDALJC2Y",
     },
-
-    themes: {
-        Sad: "Sad",
-        Pumped: "Pumped",
-        Cloudy: "Cloudy",
-        Romantic: "Romantic",
-        Icy: "Icy",
-        Party: "Party",
-        Beach: "Beach",
-        Weird: "Weird",
-        Home: "Home",
-        Space: "Space",
-        Happy: "Happy"
+  },
+  // HomeScreenImage: {height: 2880, width: 5120, src: {uri: require('./assets/031_cover_noword.png')}},
+  themeImage: {
+    Sad: { height: 2880, width: 5120, src: getUri("028_sad_nosign.png") },
+    Pumped: { height: 2880, width: 5120, src: getUri("032_pumped_nosign.png") },
+    Cloudy: { height: 2880, width: 5120, src: getUri("034_cloud_nosign.png") },
+    Romantic: {
+      height: 2880,
+      width: 5120,
+      src: getUri("036_romantic_nosign.png"),
     },
+    Icy: { height: 2880, width: 5120, src: getUri("038_snow_nosign.png") },
+    Party: { height: 2880, width: 5120, src: getUri("039_party_nosign.png") },
+    Beach: { height: 2880, width: 5120, src: getUri("042_beach_nosign.png") },
+    Weird: { height: 2880, width: 5120, src: getUri("043_weird_nosign.png") },
+    Home: { height: 2880, width: 5120, src: getUri("044_home_nosign.png") },
+    Space: { height: 2880, width: 5120, src: getUri("045_space_nosign.png") },
+    Happy: { height: 2880, width: 5120, src: getUri("046_happy_nosign.png") },
+    Lazy: { height: 2880, width: 5120, src: getUri("047_lazy_nosign.png") },
+  },
+  themeColors: {
+    Home: createColorTheme("#ffffff", "#b4a7d6", "#8e7cc380"),
+    Pumped: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
+    Lazy: createColorTheme("#d9ead3", "#b6d7a8", "#274e135e"),
+    Happy: createColorTheme("#fff2cc", "#ffe599", "#7f60005c"),
+    Weird: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
+    Sad: createColorTheme("#f3f3f3", "#efefef", "#6666665e"),
+    Romantic: createColorTheme("#ead1dc", "#d5a6bd", "#4c11305f"),
+    Home: createColorTheme("#fce5cd", "#f9cb9c", "#783f045e"),
+    Cloudy: createColorTheme("#c9daf8", "#a4c2f4", "#1c458760"),
+    Beach: createColorTheme("#cfe2f3", "#9fc5e8", "#0737635e"),
+    Party: createColorTheme("#d9d2e9", "#b4a7d6", "#20124d5f"),
+    Icy: createColorTheme("#d9d2e9", "#b4a7d6", "#20124d5f"),
+    Space: createColorTheme("#d9d2e9", "#b4a7d6", "#20124d5f"),
+  },
 
-    icons: {
-        Back: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/back.png", name: "Back"},
-        Home: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/home.png", name: "Home"},
-        Cloudy: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/clouds.png", name: "cloudy"},
-        Beach: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/beach.png", name: "Beach"},
-        Party: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/party.png", name: "Party"},
-        Icy: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/cold%20updated.png", name: "Icy"},
-        Space: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/space.png", name: "Space"},
-        Random: {uri: "https://yahtzeerage.github.io/CYOA-Assets/assets/random.png", name: "Random"}
-    
-    },
+  themeTitleNames: {
+    Pumped: "Pumped!",
+    Lazy: "Lazy...",
+    Happy: "Happy!",
+    Weird: "~ Weird ~",
+    Sad: "A Little Sad...",
+    Romantic: "Romantic",
+    Home: "Home",
+    Cloudy: "Through the Clouds",
+    Beach: "The Beach",
+    Party: "To A Party!",
+    Icy: "Somewhere Icy",
+    Space: "Outer Space",
+  },
 
-    themePlaylists: {
-        Beach: [
-            { name: 'Limonada Fria', artist: "FutureYou", track: getUri("FutureYou_Limonada%20Fria.wav")},
-            { name: 'Verano En Playa Azul', artist: "Michelle Lugo", track: getUri("Michelle_VeranoEnPlayaAzul.wav")},
-            { name: 'By the Bay', artist: "Raydee99", track: getUri("BytheBay.wav")}
-        ]
+  themeTitleBoxSize: {
+    Pumped: "60%",
+    Lazy: "60%",
+    Happy: "50%",
+    Weird: "70%",
+    Sad: "100%",
+    Romantic: "60%",
+    Home: "40%",
+    Cloudy: "100%",
+    Beach: "70%",
+    Party: "80%",
+    Icy: "100%",
+    Space: "80%",
+  },
 
+  moodThemes: {
+    Sad: "Sad",
+    Pumped: "Pumped",
+    Romantic: "Romantic",
+    Weird: "Weird",
+    Happy: "Happy",
+    Lazy: "Lazy",
+  },
 
-    },
+  placeThemes: {
+    Cloudy: "Cloudy",
+    Icy: "Icy",
+    Party: "Party",
+    Beach: "Beach",
+    Home: "Home",
+    Space: "Space",
+  },
 
+  themes: {
+    Sad: "Sad",
+    Pumped: "Pumped",
+    Cloudy: "Cloudy",
+    Romantic: "Romantic",
+    Icy: "Icy",
+    Party: "Party",
+    Beach: "Beach",
+    Weird: "Weird",
+    Home: "Home",
+    Space: "Space",
+    Happy: "Happy",
+    Lazy: "Lazy",
+  },
 
-    BACKGROUND_IMAGE_HEIGHT: 867,
-    BACKGROUND_IMAGE_WIDTH: 1542,
-    BUTTON_BORDER_WIDTH: 7,
-    GOOGLE_DOCS_TEXT_CONVERSION_RATIO: GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
-    TILE_FONT_SIZE: 24 * GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
-    SUBTITLE_FONT_SIZE: 21 * GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
-    CLICK_FONT_SIZE: 14 * GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
-    LINE_SPACING: 1.15
+  icons: {
+    Back: { uri: getUrl("back.png"), name: "Back" },
+    Home: { uri: getUrl("home.png"), name: "Home" },
+    Cloudy: { uri: getUrl("clouds.png"), name: "Cloudy" },
+    Beach: { uri: getUrl("beach.png"), name: "Beach" },
+    Party: { uri: getUrl("party.png"), name: "Party" },
+    Icy: { uri: getUrl("cold%20updated.png"), name: "Icy" },
+    Space: { uri: getUrl("space.png"), name: "Space" },
+    Random: { uri: getUrl("random.png"), name: "Random" },
+    Weird: { uri: getUrl("weird.png"), name: "Random" },
+    Lazy: { uri: getUrl("lazy.png"), name: "Lazy" },
+  },
+
+  themePlaylists: {
+    Beach: [
+      {
+        name: "Limonada Fria",
+        artist: "FutureYou",
+        track: getUri("FutureYou_Limonada%20Fria.wav"),
+      },
+      {
+        name: "Verano En Playa Azul",
+        artist: "Michelle Lugo",
+        track: getUri("Michelle_VeranoEnPlayaAzul.wav"),
+      },
+      { name: "By the Bay", artist: "Raydee99", track: getUri("BytheBay.wav") },
+    ],
+  },
+
+  BACKGROUND_IMAGE_HEIGHT: 867,
+  BACKGROUND_IMAGE_WIDTH: 1542,
+  BUTTON_BORDER_WIDTH: 7,
+  GOOGLE_DOCS_TEXT_CONVERSION_RATIO: GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
+  TILE_FONT_SIZE: 24 * GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
+  SUBTITLE_FONT_SIZE: 24 * GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
+  CLOUDS_TITLE_FONT_SIZE: 19 * GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
+  CLICK_FONT_SIZE: 14 * GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
+  ENTRY_FONT_SIZE: 21 * GOOGLE_DOCS_TEXT_CONVERSION_RATIO,
+  LINE_SPACING: 1.15,
 };
 
 export default AppConstants;

@@ -2,13 +2,13 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,14 +22,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - uses: actions/checkout@v2
+      #       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      #       - uses: actions/checkout@v2
       # 1: setup node
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 12
-          
+
         # 2: Checkout repository in the CWD
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -37,11 +37,10 @@ jobs:
       # 3: install NPM dependencies
       - name: Install dependencies
         run: npm install
-        
+
       # 4: run test command
       # - name: Run test command
-        # run: node github_bot_push_status_notifier.js --TOKEN=${{ secrets.DISCORD_BOT_TOKEN }}
-
+      # run: node github_bot_push_status_notifier.js --TOKEN=${{ secrets.DISCORD_BOT_TOKEN }}
 #       # Runs a set of commands using the runners shell
 #       - name: Run a multi-line script
 #         run: |
