@@ -28,10 +28,10 @@ const ChooseMoodOrPlace = (props: NavigationStackScreenProps): JSX.Element => {
   const mood_rand_index = Math.floor(Math.random() * moodThemes_array.length);
 
   const [moodBackground, setMoodBackground] = useState(
-    AppConstants.themeImage[placeThemes_array[place_rand_index]].src.uri
+    AppConstants.themeImage[placeThemes_array[place_rand_index]].src
   );
   const [placeBackground, setPlaceBackground] = useState(
-    AppConstants.themeImage[moodThemes_array[mood_rand_index]].src.uri
+    AppConstants.themeImage[moodThemes_array[mood_rand_index]].src
   );
 
   // load in the font for usage

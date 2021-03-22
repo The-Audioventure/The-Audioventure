@@ -1,14 +1,12 @@
+import { ImageURISource } from "react-native";
+
 const GOOGLE_DOCS_TEXT_CONVERSION_RATIO = 2;
 
 type Url = string;
 
-type Uri = {
-  uri: Url;
-};
+type Icon = { uri: Url; name: string };
 
-type Icon = Uri & { name: string };
-
-type UriGenerator = (fileName: string) => Uri;
+type UriGenerator = (fileName: string) => { uri: string };
 type UrlGenerator = (fileName: string) => Url;
 
 type ColorTheme = {
@@ -20,13 +18,13 @@ type ColorTheme = {
 type Image = {
   height: number;
   width: number;
-  src: Uri;
+  src: { uri: string };
 };
 
 type Playlist = {
   name: string;
   artist: string;
-  track: Uri;
+  track: ImageURISource;
 };
 
 type Constants = {
