@@ -30,7 +30,7 @@ const AppConstants = {
     width: 5120,
     src: {
       uri:
-        "https://raw.githubusercontent.com/YahtzeeRage/CYOA-Assets/master/assets/031_cover_noword.png?token=AIGD4GKSBNO4H24F2L7M2JDALJC2Y",
+        "https://yahtzeerage.github.io/CYOA-Assets/assets/031_cover_noword.png",
     },
   },
   // HomeScreenImage: {height: 2880, width: 5120, src: {uri: require('./assets/031_cover_noword.png')}},
