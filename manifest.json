@@ -1,7 +1,24 @@
 {
   "display": "standalone",
   "lang": "en",
-  "name": "ChooseYourOwnAudioventure_V3",
-  "short_name": "ChooseYourOwnAudioventure_V3",
-  "start_url": "/?utm_source=web_app_manifest"
+  "name": "The Audioventure",
+  "short_name": "Audioventure",
+  "start_url": "/?utm_source=web_app_manifest",
+  "icons": [
+    {
+      "src": "/The-Audioventure/pwa/chrome-icon/chrome-icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/The-Audioventure/pwa/chrome-icon/chrome-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/The-Audioventure/pwa/chrome-icon/chrome-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
