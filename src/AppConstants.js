@@ -158,6 +158,121 @@ const AppConstants = {
       },
       { name: "By the Bay", artist: "Raydee99", track: getUri("BytheBay.wav") },
     ],
+    Icy: [
+      {
+        name: "A Vast Emptiness",
+        artist: "William Joseph Scire",
+        track: getUri("scire_william_AVastEmptiness.wav")
+      },
+      {
+        name: "Winter's Calling",
+        artist: "Raydee99",
+        track: getUri("Raydee99_Winter's%20Calling.wav")
+      },
+      {
+        name: "Wintersong",
+        artist: 'Carlos "insaneintherainmusic" Eiene',
+        track: getUri("Carlos_Wintersong.wav"),
+      }
+      
+    ],
+
+    Party: [
+      {
+        name: "Luminous",
+        artist: "Pascal Garoute",
+        track: getUri("Pascal_Luminous.wav")
+      },
+      {
+        name: "House of Fun",
+        artist: "Michelle Lugo",
+        track: getUri("Michelle_HouseofFun.wav")
+      }
+    ],
+
+    Home: [
+      {
+        name: "Comfort",
+        artist: "Dayna Ambrosio",
+        track: getUri("DaynaAmbrosio_Comfort.wav")
+      }
+    ],
+
+    Space: [
+      {
+        name: "Space",
+        artist: "Brian Mowat",
+        track: getUri("Space_BrianMowat_Audioventure_v02.wav")
+      },
+      {
+        name: "Drifting",
+        artist: "Raydee99",
+        track: getUri("Drifting%20-%20Mastered.wav")
+      }
+    ],
+
+    Cloudy: [
+      {
+        name: "Gliding Above the Cloud Sea",
+        artist: "Achilles Jiang (Composerkiwi)",
+        track: getUri("Gliding_Above_the%20Cloud_Sea.wav")
+      }
+    ],
+
+    Lazy: [
+      {
+        name: "Afternoon Lounging",
+        artist: "Ben Lipkin",
+        track: getUri("Ben_AfternoonLounging.wav")
+      },
+      {
+        name: "Lazy Tunes",
+        artist: "Raydee99",
+        track: getUri("Raydee99_LazyTunes.wav")
+      }
+    ],
+
+    Pumped: [
+      {
+        name: "Level Up",
+        artist: "Keromusic",
+        track: getUri("Trey_Level Up.wav")
+      },
+      {
+        name: "GALAXY☆FACTORY",
+        artist: "dante / SoundCirclet",
+        track: getUri("dante_GALAXY_FACTORY.wav")
+      }
+    ],
+
+    Romantic: [
+      {
+        name: "Madison",
+        artist: "Devon Gardner",
+        track: getUri("Madison_Romantic01.wav")
+      }
+    ],
+
+    Weird: [
+      {
+        name: "Duck Tape Medicine",
+        artist: "Gregory Osborne",
+        track: getUri("Greg_DuctTapeMedicine_FirstMix.wav")
+      }
+    ],
+
+    Happy: [
+      {
+        name: "Sunbeam",
+        artist: 'Remi "Candle" Chandler',
+        track: getUri("CandleKing_Sunbeam.wav")
+      }, 
+      {
+        name: "Can't Drag Me Down",
+        artist: "FutureYou",
+        track: getUri("FutureYou_Can't_Drag_Me_Down.wav")
+      }
+    ]
   },
 
   BACKGROUND_IMAGE_HEIGHT: 867,

@@ -11,6 +11,8 @@ import {
 } from "react-native";
 import ViewContainer from "../components/ViewContainer";
 
+import './unselectable.css'
+
 const styles = (props) =>
   StyleSheet.create({
     scroll: {
@@ -113,6 +115,7 @@ const styles = (props) =>
       color: props.fontColor,
       opacity: 1,
       lineHeight: props.lineHeight,
+      userSelect: "none"
     },
   });
 

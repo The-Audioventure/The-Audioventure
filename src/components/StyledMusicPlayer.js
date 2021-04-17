@@ -233,10 +233,13 @@ export default class StyledMusicPlayer extends React.Component {
   }
 
   async componentWillUnmount() {
-    this.state.playbackInstance.unloadAsync();
+    await this.state.playbackInstance.unloadAsync();
   }
 
   render() {
+
+
+    
     return (
       <ViewContainer color="clear" height="54.5454545%" width="50%" nudge>
         <ViewContainer
@@ -288,6 +291,9 @@ export default class StyledMusicPlayer extends React.Component {
             keyExtractor={(track) => track.name}
             data={this.props.playlist}
             renderItem={({ item }) => {
+
+
+              
               return (
                 <Banner
                   height="100%"
@@ -303,22 +309,22 @@ export default class StyledMusicPlayer extends React.Component {
                   >
                     <View style={{ opacity: this.state.opacities[item.name] }}>
                       <ScrollView
-                        style={{ flexDirection: "row" }}
+                        style={{ flexDirection: "row"}}
                         horizontal
                         showsHorizontalScrollIndicator={false}
                         nestedScrollEnabled
                         contentContainerStyle={{ width: "100%" }}
                       >
-                        <View style={{ width: "100%" }}>
+                        <View style={{width: `${item.name} / ${item.artist}`.length > 35? undefined : '100%'}} >
                           <Text
                             style={
-                              this.props.fontStyle(
+                              [this.props.fontStyle(
                                 this.props.subtitleFontSize,
                                 this.props.subtitleLineHeight,
                                 "center",
-                                this.props.subtitleFontSize / 2,
+                                (`${item.name} / ${item.artist}`.length > 35? this.props.subtitleFontSize/8 : undefined) ,
                                 "Tinos_400Regular"
-                              ).style
+                              ).style]
                             }
                           >
                             {item.name} / {item.artist}

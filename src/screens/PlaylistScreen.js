@@ -57,31 +57,27 @@ const PlaylistScreen = ({ navigation }) => {
       break;
     case AppConstants.themes.Cloudy:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Happy:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Home:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
-      break;
-    case AppConstants.themes.Home:
-      IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Party:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Pumped:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Romantic:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Sad:
       IMAGE = AppConstants.themeImage[THEME];
@@ -89,23 +85,24 @@ const PlaylistScreen = ({ navigation }) => {
       break;
     case AppConstants.themes.Icy:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Space:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Weird:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Lazy:
       IMAGE = AppConstants.themeImage[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
     default:
       console.warn("No Theme Found For Image");
       break;
   }
-  PLAYLIST = AppConstants.themePlaylists["Beach"];
+  if (!PLAYLIST) {PLAYLIST = AppConstants.themePlaylists["Beach"]};
 
   // keep the known window dimensions up to date amidst resize
   const [windowDim, setWindow] = useState(Dimensions.get("window"));
@@ -116,6 +113,9 @@ const PlaylistScreen = ({ navigation }) => {
     PressStart2P_400Regular,
     Tinos_400Regular,
   });
+
+
+
   if (!fontsLoaded) {
     return <AppLoading />;
   }
@@ -162,14 +162,15 @@ const PlaylistScreen = ({ navigation }) => {
       style: {
         fontFamily: fontStyle,
         fontSize: fontSize,
-        textAlign: "center",
+        textAlign: align,
         textAlignVertical: "center",
         color: AppConstants.themeColors[THEME].text,
         opacity: 1,
+        paddingLeft: leftPad,
         lineHeight: lineHeight,
-        alignSelf: align,
-        alignContent: "center",
-        alignItems: "center",
+        // alignSelf: align,
+        // alignContent: "center",
+        // alignItems: "flex-start",
       },
     });
   };

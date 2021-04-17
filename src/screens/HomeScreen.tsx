@@ -1,30 +1,20 @@
 import {
-  Text,
-  Image,
-  StyleSheet,
-  View,
   TouchableOpacity,
-  ImagePropTypes,
-  Touchable,
-  ImageBackground,
-  ScaledSize,
 } from "react-native";
 import { Dimensions } from "react-native";
-import AppLoading from "expo-app-loading";
 import {
   useFonts,
   PressStart2P_400Regular,
 } from "@expo-google-fonts/press-start-2p";
 import { Tinos_400Regular } from "@expo-google-fonts/tinos";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ViewContainer from "../components/ViewContainer";
 import StyledBackground from "../components/StyledBackground";
 import utilities from "../utilities";
 import TextBanner from "../components/TextBanner";
 import AppConstants from "../AppConstants";
-import { Asset, useAssets } from "expo-asset";
+import { useAssets } from "expo-asset";
 
-import { Button } from "react-native-paper";
 
 const HomeScreen = ({ navigation }) => {
   console.log(navigation);
