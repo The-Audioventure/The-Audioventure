@@ -62,7 +62,6 @@ export default class StyledBackground extends React.Component {
         }
 
         const THEME = themes_array[rand_index];
-        console.log(AppConstants.themeImage, THEME, themes_array, rand_index);
 
         this.props.setBackground(AppConstants.themeImage[THEME].src.uri);
         this.fadeIn();

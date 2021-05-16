@@ -13,6 +13,7 @@ import RootScreen from "./src/screens/RootScreen";
 import { Platform } from "react-native";
 
 import HomeScreen from "./src/screens/HomeScreen";
+import CreditsScreen from "./src/screens/CreditsScreen"
 
 const navigator = createStackNavigator(
   {
@@ -22,12 +23,12 @@ const navigator = createStackNavigator(
     MatchMyMood: MatchMyMoodScreen,
     TakeMeSomewhere: TakeMeSomewhereScreen,
     Playlist: PlaylistScreen,
+    Credits: CreditsScreen
   },
   {
     initialRouteName: "Root",
     headerMode: "none",
     defaultNavigationOptions: {
-      title: "App",
       cardStyle: { backgroundColor: "black" },
       cardStyleInterpolator: CardStyleInterpolators.forNoAnimation,
     },

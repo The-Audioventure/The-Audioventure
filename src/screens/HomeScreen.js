@@ -1,5 +1,5 @@
 import {
-  TouchableOpacity,
+  TouchableOpacity, Image, ImageBackground
 } from "react-native";
 import { Dimensions } from "react-native";
 import {
@@ -7,7 +7,7 @@ import {
   PressStart2P_400Regular,
 } from "@expo-google-fonts/press-start-2p";
 import { Tinos_400Regular } from "@expo-google-fonts/tinos";
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import ViewContainer from "../components/ViewContainer";
 import StyledBackground from "../components/StyledBackground";
 import utilities from "../utilities";
@@ -15,14 +15,47 @@ import TextBanner from "../components/TextBanner";
 import AppConstants from "../AppConstants";
 import { useAssets } from "expo-asset";
 
+import loadingScreen from "../loading.gif"
 
 const HomeScreen = ({ navigation }) => {
-  console.log(navigation);
+
   // navigation.navigate('Home')
   // keep the known window dimensions up to date amidst resize
   const [windowDim, setWindow] = useState(Dimensions.get("window"));
   window.addEventListener("resize", () => setWindow(Dimensions.get("window")));
 
+
+
+  const HEIGHT = AppConstants.HomeScreenImage.height;
+  const WIDTH = AppConstants.HomeScreenImage.width;
+
+  const WIDTH_SCALING_FACTOR = WIDTH / AppConstants.BACKGROUND_IMAGE_WIDTH;
+
+  const imageDim = { height: HEIGHT, width: WIDTH };
+  const scaledImageDim = utilities.calculate_scaledImageDim(
+    windowDim,
+    imageDim
+  );
+  const scaledButtonBorderWidth =
+    AppConstants.BUTTON_BORDER_WIDTH *
+    scaledImageDim.scalingRatio *
+    WIDTH_SCALING_FACTOR;
+  const scaled_titleFontSize =
+    AppConstants.TILE_FONT_SIZE *
+    scaledImageDim.scalingRatio *
+    WIDTH_SCALING_FACTOR;
+  const scaled_titleLineHeight =
+    scaled_titleFontSize * AppConstants.LINE_SPACING;
+  const scaled_subtitleFontSize =
+    scaledImageDim.scalingRatio *
+    AppConstants.CLICK_FONT_SIZE *
+    WIDTH_SCALING_FACTOR;
+  const scaled_subtitleLineHeight =
+    scaled_subtitleFontSize * AppConstants.LINE_SPACING;
+
+
+
+    
   // load in the font for usage or error
   let [fontsLoaded] = useFonts({
     PressStart2P_400Regular,
@@ -35,55 +68,40 @@ const HomeScreen = ({ navigation }) => {
   const themeBackground_uris = Object.values(AppConstants.themeImage).map(
     (element) => element.src.uri
   );
-  const beachSong_uris = AppConstants.themePlaylists.Beach.map(
-    (element) => element.track.uri
-  );
+  // const beachSong_uris = AppConstants.themePlaylists.Beach.map(
+  //   (element) => element.track.uri
+  // );
+  var song_uris = []
+  Object.values(AppConstants.themePlaylists).forEach(
+    (playlist) => {
+      const playlist_tracks = playlist.map(e => e.track.uri)
+      song_uris = song_uris.concat(playlist_tracks)
+    }
+  )
   // console.log(Object.keys(AppConstants.icons));
   const [assets] = useAssets([
-    // AppConstants.HomeScreenImage.src.uri,
-    AppConstants.themeImage.Beach.src.uri,
+    AppConstants.HomeScreenImage.src.uri,
     ...icon_uris,
-    ...beachSong_uris,
     ...themeBackground_uris,
+    ...song_uris
   ]);
+
+  // const [delay, setDelay] = useState(true)
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => setDelay(false), 3000);
+  //   return () => clearTimeout(timeout);
+  // }, []);
+
+
   if (!fontsLoaded && !assets) {
+    console.log('called')
     return (
-      <ViewContainer color="black" height="100%" width="100%">
-        {/* <Image
-                source={require('../assets/loading.gif')}
-                style={{flex:1, aspectRatio: 2,height:'100%', width:'100%'}}
-                resizeMode='contain'
-            ></Image> */}
-      </ViewContainer>
+      <ImageBackground  source={loadingScreen} style={{alignSelf: 'center',  height: scaledImageDim.height, width: scaledImageDim.width}} color="black" height="100%" width="100%">
+      </ImageBackground>
     );
   }
 
-  const HEIGHT = AppConstants.HomeScreenImage.height;
-  const WIDTH = AppConstants.HomeScreenImage.width;
 
-  const MAGIC_SCALING_FACTOR = WIDTH / AppConstants.BACKGROUND_IMAGE_WIDTH;
-
-  const imageDim = { height: HEIGHT, width: WIDTH };
-  const scaledImageDim = utilities.calculate_scaledImageDim(
-    windowDim,
-    imageDim
-  );
-  const scaledButtonBorderWidth =
-    AppConstants.BUTTON_BORDER_WIDTH *
-    scaledImageDim.scalingRatio *
-    MAGIC_SCALING_FACTOR;
-  const scaled_titleFontSize =
-    AppConstants.TILE_FONT_SIZE *
-    scaledImageDim.scalingRatio *
-    MAGIC_SCALING_FACTOR;
-  const scaled_titleLineHeight =
-    scaled_titleFontSize * AppConstants.LINE_SPACING;
-  const scaled_subtitleFontSize =
-    scaledImageDim.scalingRatio *
-    AppConstants.CLICK_FONT_SIZE *
-    MAGIC_SCALING_FACTOR;
-  const scaled_subtitleLineHeight =
-    scaled_subtitleFontSize * AppConstants.LINE_SPACING;
 
   return (
     <ViewContainer color="black" height="100%" width="100%">
@@ -99,27 +117,15 @@ const HomeScreen = ({ navigation }) => {
           width={scaledImageDim.width}
         >
           <ViewContainer
-            apart
+            start
             nudge
             color="clear"
             height="84.5%"
             width="50%"
             top=".6%"
           >
-            <ViewContainer color="clear" height="36%" width="100%">
-              <TextBanner
-                fontColor="#ffffff"
-                borderColor="#b4a7d6"
-                backgroundColor="#8e7cc380"
-                borderWidth={scaledButtonBorderWidth}
-                fontSize={scaled_titleFontSize}
-                lineHeight={scaled_titleLineHeight}
-                height="78%"
-                width="100%"
-                bottomCorners
-              >
-                Choose Your <br></br>Own<br></br>Audioventure!
-              </TextBanner>
+            {/* <ViewContainer color="blue" height="36%" width="100%"> */}
+
               <TextBanner
                 fontColor="#ffffff"
                 borderColor="#b4a7d6"
@@ -127,13 +133,12 @@ const HomeScreen = ({ navigation }) => {
                 borderWidth={scaledButtonBorderWidth}
                 fontSize={scaled_subtitleFontSize}
                 lineHeight={scaled_subtitleLineHeight}
-                height="22%"
+                height="7.92%"
                 width="100%"
-                noTop
               >
                 Click anywhere to start!
               </TextBanner>
-            </ViewContainer>
+            {/* </ViewContainer> */}
 
             <TextBanner
               fontColor="#ffffff"
@@ -146,6 +151,8 @@ const HomeScreen = ({ navigation }) => {
               height="9%"
               width="33%"
               touchable
+              onPress={()=>{navigation.navigate("Credits")}}
+              noTop
             >
               Credits
             </TextBanner>

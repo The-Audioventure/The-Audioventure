@@ -47,6 +47,13 @@ const apart = (props) =>
     },
   });
 
+const start = (props) =>
+StyleSheet.create({
+  style: {
+    justifyContent: "flex-start",
+  },
+});
+
 const round = (props) =>
   StyleSheet.create({
     style: {
@@ -67,6 +74,9 @@ export default class ViewContainer extends React.Component {
     }
     if (this.props.apart) {
       viewStyle = StyleSheet.compose(viewStyle, apart(this.props).style);
+    }
+    if (this.props.start) {
+      viewStyle = StyleSheet.compose(viewStyle, start(this.props).style)
     }
     if (this.props.radius) {
       viewStyle = StyleSheet.compose(viewStyle, round(this.props).style);

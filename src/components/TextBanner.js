@@ -156,10 +156,16 @@ export default class TextBanner extends React.Component {
         StyleSheet.create({ style: { borderRightWidth: 0 } }.style)
       );
     }
+    if (this.props.noTop) {
+      viewStyle = StyleSheet.compose(
+        viewStyle,
+        StyleSheet.create({ style: { borderTopWidth: 0 } }.style)
+      );
+    }
 
     if (this.props.touchable) {
       return (
-        <TouchableOpacity style={viewStyle}>
+        <TouchableOpacity onPress={this.props.onPress} style={viewStyle}>
           <ViewContainer height="100%" width="100%">
             <Text style={propStyles.fontStyle}>{this.props.children}</Text>
           </ViewContainer>

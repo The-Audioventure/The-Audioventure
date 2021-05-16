@@ -23,7 +23,7 @@ import TextBanner from "../components/TextBanner";
 import AppConstants from "../AppConstants";
 import { FlatList } from "react-native-gesture-handler";
 import Banner from "../components/Banner2";
-import { AntDesign, Ionicons } from "@expo/vector-icons";
+import { AntDesign, Ionicons, Entypo  } from "@expo/vector-icons";
 import { Audio } from "expo-av";
 
 const OPACITY_STATE = {
@@ -162,6 +162,11 @@ export default class StyledMusicPlayer extends React.Component {
   handlePreviousTrack = async () => {
     let { playbackInstance, currentIndex, isPlaying } = this.state;
 
+    const songTime = await playbackInstance.getStatusAsync();
+    if (songTime.positionMillis > 1000) {
+      await playbackInstance.playFromPositionAsync(0)
+      return
+    }
     if (!isPlaying && currentIndex === 0) {
       await this.handlePlayPause();
     } else if (currentIndex === 0) {
@@ -209,7 +214,14 @@ export default class StyledMusicPlayer extends React.Component {
     this.state.isNexting = false;
   };
 
+  async componentWillUnmount() {
+    console.log("unmount music")
+  }
+
+
   async componentDidMount() {
+    console.log('mount music')
+    
     // this._unsubscribe = this.props.navigation.addListener('focus', () => {this.state.playbackInstance.unloadAsync(); console.log("a")});
     // const initialOpacityState = this.props.playlist.map((element) => {
     //     var dict = {}; dict[element.name] = OPACITY_STATE.PAUSE; return dict
@@ -227,6 +239,7 @@ export default class StyledMusicPlayer extends React.Component {
       });
       await this.loadAudio();
       this.handlePlayPause();
+      document.body.onkeyup = (e) => e.keyCode === 32? this.handlePlayPause() : null
     } catch (err) {
       console.log(err);
     }
@@ -369,6 +382,19 @@ export default class StyledMusicPlayer extends React.Component {
             fontSize={this.props.entryFontSize}
             lineHeight={this.props.entryLineHeight}
           >
+            <View style={{position: 'absolute', left: 11}} >
+              
+              <TouchableOpacity onPress={()=>{ 
+                                              (this.props.themeType === "Mood")? this.props.navigation.replace("MatchMyMood")
+                                              :  this.props.navigation.replace("TakeMeSomewhere")}} >
+                <Entypo  
+                  name="back"
+                  size={this.props.titleFontSize}
+                  color={AppConstants.themeColors[this.props.themeName].border}
+                />
+              </TouchableOpacity>
+            </View>
+
             <TouchableOpacity onPress={this.handlePreviousTrack}>
               <Ionicons
                 name="play-skip-back-circle"
@@ -396,6 +422,8 @@ export default class StyledMusicPlayer extends React.Component {
               )}
             </TouchableOpacity>
 
+            
+
             <Text> </Text>
 
             <TouchableOpacity onPress={this.handleNextTrack}>
@@ -405,6 +433,17 @@ export default class StyledMusicPlayer extends React.Component {
                 color={AppConstants.themeColors[this.props.themeName].border}
               ></Ionicons>
             </TouchableOpacity>
+
+            <View style={{position: 'absolute', right: 11}} >
+              
+              <TouchableOpacity onPress={()=>{ this.props.navigation.replace("Home") }} >
+                <Entypo  
+                  name="home"
+                  size={this.props.titleFontSize}
+                  color={AppConstants.themeColors[this.props.themeName].border}
+                />
+              </TouchableOpacity>
+            </View>
           </TextBanner>
         </ViewContainer>
       </ViewContainer>

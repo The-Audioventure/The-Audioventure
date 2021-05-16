@@ -18,7 +18,7 @@ import {
   PressStart2P_400Regular,
 } from "@expo-google-fonts/press-start-2p";
 import { Tinos_400Regular } from "@expo-google-fonts/tinos";
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer, useEffect } from "react";
 import ViewContainer from "../components/ViewContainer";
 import StyledBackground from "../components/StyledBackground";
 import utilities from "../utilities";
@@ -28,24 +28,41 @@ import AppConstants from "../AppConstants";
 import StyledMusicPlayer from "../components/StyledMusicPlayer";
 import { random } from "underscore";
 
+
 const PlaylistScreen = ({ navigation }) => {
-  const THEME_PARAM = navigation.getParam("themeName");
-  var THEME = THEME_PARAM;
-  if (THEME_PARAM === "Random") {
+
+  var THEME = navigation.getParam("themeName");
+  var THEME_TYPE = navigation.getParam("themeType");
+
+  if (!THEME_TYPE || !THEME) {
+    if (Math.random() > 0.5) {
+      THEME_TYPE = "Mood"
+    } 
+    else {
+      THEME_TYPE = "Place"
+    }
+    THEME = "Random"
+  }
+
+  if (THEME === "Random") {
+    
     var themes_array = null;
-    if (navigation.getParam("themeType") === "Mood") {
+    if (THEME_TYPE === "Mood") {
       themes_array = Object.keys(AppConstants.moodThemes);
-    } else if (navigation.getParam("themeType") === "Place") {
+    } else if (THEME_TYPE === "Place") {
       themes_array = Object.keys(AppConstants.placeThemes);
     } else {
       console.error(
         "no theme type found that matches: " + navigation.getParam("themeType")
       );
     }
-
+    
     const rand_index = Math.floor(random(themes_array.length));
     THEME = themes_array[rand_index];
+    navigation.setParams({themeName: THEME, themeType: THEME_TYPE})
   }
+
+  
 
   const THEME_NAME = AppConstants.themeTitleNames[THEME];
   let IMAGE;
@@ -81,7 +98,7 @@ const PlaylistScreen = ({ navigation }) => {
       break;
     case AppConstants.themes.Sad:
       IMAGE = AppConstants.themeImage[THEME];
-      // PLAYLIST = AppConstants.themePlaylists[THEME];
+      PLAYLIST = AppConstants.themePlaylists[THEME];
       break;
     case AppConstants.themes.Icy:
       IMAGE = AppConstants.themeImage[THEME];
@@ -185,6 +202,7 @@ const PlaylistScreen = ({ navigation }) => {
         <StyledMusicPlayer
           navigation={navigation}
           themeName={THEME}
+          themeType={THEME_TYPE}
           themeTitle={THEME_NAME}
           playlist={PLAYLIST}
           fontStyle={fontStyle}
