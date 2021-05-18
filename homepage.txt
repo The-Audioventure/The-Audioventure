@@ -1,1 +1,3 @@
 "homepage": "https://yahtzeerage.github.io/The-Audioventure/",
+
+    "githubUrl": "https://github.com/YahtzeeRage/The-Audioventure",
