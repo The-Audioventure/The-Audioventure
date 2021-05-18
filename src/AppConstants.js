@@ -24,6 +24,7 @@ const createColorTheme = function (textColor, borderColor, backgroundColor) {
 };
 
 const AppConstants = {
+	backgroundColor: 'black',
 	// HomeScreenImage: {height: 2880, width: 5120, src: getUri("031_cover_noword.png")},
 	HomeScreenImage: {
 		height: 2880,
@@ -154,6 +155,7 @@ const AppConstants = {
 		Sad: { uri: getUrl('sad.png'), name: 'Sad' },
 		Romantic: { uri: getUrl('romance.png'), name: 'Romantic' },
 	},
+	backHomeIcon: { src: getUri('back_home_button.png'), name: 'BackHome' },
 
 	themePlaylists: {
 		Beach: [
@@ -297,19 +299,19 @@ const AppConstants = {
 
 		Sad: [
 			{
+				name: 'Melan',
+				artist: 'Corvus Prudens',
+				track: getUri('CorvusPrudens_Melan.wav'),
+			},
+			{
 				name: 'Remnants of the Past',
 				artist: 'Raydee99',
 				track: getUri('Raydee99_RemnantsofthePast.wav'),
 			},
 			{
-				name: 'Caio Allura',
+				name: 'Allura',
 				artist: 'Caio M. Jiacomini',
 				track: getUri('Caio_Allura.wav'),
-			},
-			{
-				name: 'Melan',
-				artist: 'Corvus Prudens',
-				track: getUri('CorvusPrudens_Melan.wav'),
 			},
 		],
 

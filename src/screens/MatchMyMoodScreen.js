@@ -143,13 +143,37 @@ const MatchMyMoodScreen = ({ navigation }) => {
 	});
 
 	return (
-		<ViewContainer color="black" height="100%" width="100%">
+		<ViewContainer color={AppConstants.backgroundColor} height="100%" width="100%">
 			<StyledBackground
 				image={AppConstants.NoWordCoverImage.src.uri}
 				height={scaledImageDim.height}
 				width={scaledImageDim.width}
 			>
 				{icons}
+				{labelVisible['Random'] ? (
+					<View
+						style={{
+							position: 'absolute',
+							height: '9.2%',
+							width: '23%',
+							left: '72.5%',
+							top: '19.5%',
+						}}
+					>
+						<TextBanner
+							fontColor="#d9d2e9"
+							borderColor="#b4a7d6"
+							backgroundColor="#20124d5e"
+							borderWidth={scaledButtonBorderWidth}
+							fontSize={scaled_titleFontSize}
+							lineHeight={scaled_titleLineHeight}
+							height="100%"
+							width="100%"
+						>
+							Random
+						</TextBanner>
+					</View>
+				) : null}
 				{labelVisible[AppConstants.moodThemes.Pumped] ? (
 					<View
 						style={{

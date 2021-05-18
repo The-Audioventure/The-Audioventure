@@ -76,6 +76,7 @@ const TakeMeSomewhere = ({ navigation }) => {
 
 	const labelVisibleReducer = (state, action) => {
 		const newState = { ...state, [action.type]: action.payload };
+		console.log(state, action, newState);
 		console.log(newState);
 		return newState;
 	};
@@ -83,7 +84,8 @@ const TakeMeSomewhere = ({ navigation }) => {
 		acc[currKey] = false;
 		return acc;
 	}, {});
-	const [labelVisible, labelVisibleDispatch] = useReducer(labelVisibleReducer, labelVisibleInit);
+	labelVisibleInit['Random'] = false;
+	const [labelVisible, labelVisibleDispatch] = useReducer(labelVisibleReducer, {});
 
 	if (!fontsLoaded || !assets) {
 		return <AppLoading />;
@@ -166,13 +168,37 @@ const TakeMeSomewhere = ({ navigation }) => {
 	});
 
 	return (
-		<ViewContainer color="black" height="100%" width="100%">
+		<ViewContainer color={AppConstants.backgroundColor} height="100%" width="100%">
 			<StyledBackground
 				image={AppConstants.NoWordCoverImage.src.uri}
 				height={scaledImageDim.height}
 				width={scaledImageDim.width}
 			>
 				{icons}
+				{labelVisible['Random'] ? (
+					<View
+						style={{
+							position: 'absolute',
+							height: '9.2%',
+							width: '23%',
+							left: '72.5%',
+							top: '19.5%',
+						}}
+					>
+						<TextBanner
+							fontColor="#d9d2e9"
+							borderColor="#b4a7d6"
+							backgroundColor="#20124d5e"
+							borderWidth={scaledButtonBorderWidth}
+							fontSize={scaled_titleFontSize}
+							lineHeight={scaled_titleLineHeight}
+							height="100%"
+							width="100%"
+						>
+							Random
+						</TextBanner>
+					</View>
+				) : null}
 				{labelVisible[AppConstants.placeThemes.Home] ? (
 					<View
 						style={{
