@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/The-Audioventure/static/js/app.ce98058f.chunk.js",
-    "app.js.map": "/The-Audioventure/static/js/app.ce98058f.chunk.js.map",
+    "app.js": "/The-Audioventure/static/js/app.26c7086d.chunk.js",
+    "app.js.map": "/The-Audioventure/static/js/app.26c7086d.chunk.js.map",
     "runtime~app.js": "/The-Audioventure/static/js/runtime~app.f58e92da.js",
     "runtime~app.js.map": "/The-Audioventure/static/js/runtime~app.f58e92da.js.map",
-    "static/js/2.9af5cf78.chunk.js": "/The-Audioventure/static/js/2.9af5cf78.chunk.js",
-    "static/js/2.9af5cf78.chunk.js.map": "/The-Audioventure/static/js/2.9af5cf78.chunk.js.map",
+    "static/js/2.3793b462.chunk.js": "/The-Audioventure/static/js/2.3793b462.chunk.js",
+    "static/js/2.3793b462.chunk.js.map": "/The-Audioventure/static/js/2.3793b462.chunk.js.map",
     "fonts/AntDesign.ttf": "/The-Audioventure/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/The-Audioventure/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/The-Audioventure/./fonts/Feather.ttf",
@@ -29,12 +29,12 @@
     "index.html": "/The-Audioventure/index.html",
     "manifest.json": "/The-Audioventure/manifest.json",
     "serve.json": "/The-Audioventure/serve.json",
-    "static/js/2.9af5cf78.chunk.js.LICENSE.txt": "/The-Audioventure/static/js/2.9af5cf78.chunk.js.LICENSE.txt",
+    "static/js/2.3793b462.chunk.js.LICENSE.txt": "/The-Audioventure/static/js/2.3793b462.chunk.js.LICENSE.txt",
     "static/media/loading.gif": "/The-Audioventure/static/media/loading.66863130.gif"
   },
   "entrypoints": [
     "static/js/runtime~app.f58e92da.js",
-    "static/js/2.9af5cf78.chunk.js",
-    "static/js/app.ce98058f.chunk.js"
+    "static/js/2.3793b462.chunk.js",
+    "static/js/app.26c7086d.chunk.js"
   ]
 }
