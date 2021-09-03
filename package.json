@@ -1,6 +1,6 @@
 {
   "main": "index.js",
-  
+  "homepage": "https://the-audioventure.github.io/The-Audioventure/",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -13,7 +13,9 @@
   "dependencies": {
     "@expo-google-fonts/press-start-2p": "^0.1.0",
     "@expo-google-fonts/tinos": "^0.1.0",
+    "@ptomasroos/react-native-multi-slider": "^2.2.2",
     "@react-native-community/masked-view": "0.1.10",
+    "@react-native-community/slider": "3.0.3",
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
     "@react-navigation/web": "^1.0.0-alpha.9",
@@ -32,13 +34,16 @@
     "react-dom": "16.13.1",
     "react-helmet": "^6.1.0",
     "react-native": "~0.63.4",
+    "react-native-auto-scrolling": "^2.1.1",
     "react-native-gesture-handler": "~1.8.0",
+    "react-native-marquee": "^0.3.2",
     "react-native-paper": "^4.7.2",
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.9",
     "react-native-screens": "~2.15.0",
     "react-native-scroll-into-view": "^1.0.3",
     "react-native-slideshow": "^1.0.1",
+    "react-native-text-ticker": "^1.13.0",
     "react-native-unimodules": "~0.12.0",
     "react-native-vector-icons": "^8.0.0",
     "react-native-web": "~0.13.12",

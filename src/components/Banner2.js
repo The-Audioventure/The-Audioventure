@@ -39,25 +39,31 @@ export default class Banner2 extends React.Component {
     if (this.props.noTop) {
       viewStyle = StyleSheet.compose(
         viewStyle,
-        StyleSheet.create({ style: { borderTopWidth: 0 } }.style)
+        StyleSheet.create({ style: { borderTopWidth: 0 } }).style
       );
     }
     if (this.props.noBottom) {
       viewStyle = StyleSheet.compose(
         viewStyle,
-        StyleSheet.create({ style: { borderBottomWidth: 0 } }.style)
+        StyleSheet.create({ style: { borderBottomWidth: 0 } }).style
       );
     }
     if (this.props.noBorder) {
       viewStyle = StyleSheet.compose(
         viewStyle,
-        StyleSheet.create({ style: { borderWidth: 0 } }.style)
+        StyleSheet.create({ style: { borderWidth: 0 } }).style
       );
     }
     if (this.props.corners) {
       viewStyle = StyleSheet.compose(
         viewStyle,
-        StyleSheet.create({ style: { borderRadius: 0 } }.style)
+        StyleSheet.create({ style: { borderRadius: 0 } }).style
+      );
+    }
+    if (this.props.bottomCorners) {
+      viewStyle = StyleSheet.compose(
+        viewStyle,
+        StyleSheet.create({ style: { borderBottomLeftRadius: 0 } }).style
       );
     }
 

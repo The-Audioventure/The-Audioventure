@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import ViewContainer from "../components/ViewContainer";
 
-import './unselectable.css'
+import "./unselectable.css";
 
 const styles = (props) =>
   StyleSheet.create({
@@ -115,7 +115,7 @@ const styles = (props) =>
       color: props.fontColor,
       opacity: 1,
       lineHeight: props.lineHeight,
-      userSelect: "none"
+      userSelect: "none",
     },
   });
 
@@ -134,7 +134,9 @@ export default class TextBanner extends React.Component {
       viewStyle = StyleSheet.compose(viewStyle, propStyles.bottomCorners);
     } else if (this.props.justBorder) {
       viewStyle = StyleSheet.compose(viewStyle, propStyles.justBorder);
-    } else if (this.props.corners) {
+    }
+
+    if (this.props.corners) {
       viewStyle = StyleSheet.compose(viewStyle, propStyles.corners);
     }
 
@@ -160,6 +162,13 @@ export default class TextBanner extends React.Component {
       viewStyle = StyleSheet.compose(
         viewStyle,
         StyleSheet.create({ style: { borderTopWidth: 0 } }.style)
+      );
+    }
+
+    if (this.props.noBorders) {
+      viewStyle = StyleSheet.compose(
+        viewStyle,
+        StyleSheet.create({ style: { borderWidth: 0 } }).style
       );
     }
 

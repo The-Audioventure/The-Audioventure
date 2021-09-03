@@ -7,7 +7,7 @@
 		"version": "1.0.0",
 		"assetBundlePatterns": ["**/*"],
 		"icon": "src/icon3.png",
-
+		"githubUrl": "https://github.com/YahtzeeRage/The-Audioventure",
 		"web": {
 			"favicon": "src/icon3.png",
 			"name": "The Audioventure",
