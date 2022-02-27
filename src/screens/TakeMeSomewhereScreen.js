@@ -30,36 +30,35 @@ import { Asset, useAssets } from "expo-asset";
 
 const ICONS = {
   Back: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/back.png",
+    uri: AppConstants.assetsDomain + "assets/back.png",
     name: "Back",
   },
   Home: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/home.png",
+    uri: AppConstants.assetsDomain + "assets/home.png",
     name: "Home",
   },
   Cloudy: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/clouds.png",
+    uri: AppConstants.assetsDomain + "assets/clouds.png",
     name: "cloudy",
   },
   Beach: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/beach.png",
+    uri: AppConstants.assetsDomain + "assets/beach.png",
     name: "Beach",
   },
   Party: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/party.png",
+    uri: AppConstants.assetsDomain + "assets/party.png",
     name: "Party",
   },
   Icy: {
-    uri:
-      "https://the-audioventure.github.io/CYOA-Assets/assets/cold%20updated.png",
+    uri: AppConstants.assetsDomain + "assets/cold%20updated.png",
     name: "Icy",
   },
   Space: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/space.png",
+    uri: AppConstants.assetsDomain + "assets/space.png",
     name: "Space",
   },
   Random: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/random.png",
+    uri: AppConstants.assetsDomain + "assets/random.png",
     name: "Random",
   },
 };

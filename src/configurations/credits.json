@@ -1,0 +1,75 @@
+[
+  {
+    "title": "Producer",
+    "people": ["Raydee99"],
+    "links": ["https://www.raydee99.com/"]
+  },
+  {
+    "title": "Programmer",
+    "people": ["Yahiya Hussain"],
+    "links": ["https://github.com/YahiyaHussain"]
+  },
+  {
+    "title": "Background Artist",
+    "people": ["Gem"],
+    "links": ["https://twitter.com/gemhunter178"]
+  },
+  {
+    "title": "UI Artist",
+    "people": ["Jack Rodríguez\n(Ordinary Ram)"],
+    "links": ["https://linktr.ee/RibbitRam?s=09"]
+  },
+  {
+    "title": "Mix Engineers",
+    "people": ["Charlie Westphal", "JJ Sanchez"],
+    "links": ["Soundcitizenmusic.com", "https://www.instagram.com/jada.quin/"]
+  },
+  {
+    "title": "Composers",
+    "people": [
+      "Achilles Jiang\n|| Composer Kiwi",
+      "Ben Lipkin",
+      "Brian Mowat",
+      "Caio M. Jiacomini",
+      "Carlos\n\"insaneintherainmusic\"\nEiene",
+      "Corvus Prudens",
+      "dante / SoundCirclet",
+      "Dayna Ambrosio",
+      "Dylan Ever | mudheart",
+      "FutureYou",
+      "Gregory Osborne",
+      "Madison Denbrock",
+      "Michelle Lugo",
+      "Pascal Garoute",
+      "Remi \"Candle\" Chandler",
+      "Sydney Smith",
+      "Trey Rodman (KERO)",
+      "William Joseph Scire"
+    ],
+    "links": [
+      "https://soundcloud.com/achilles-jiang-630332447",
+      "https://www.lipkinaudio.com/",
+      "https://www.brianmowat.com/",
+      "http://caiojminiaudio.com/",
+      "https://www.insaneintherainmusic.com/",
+      null,
+      "https://soundcirclet.wixsite.com/music",
+      "https://www.daynaambrosio.com/",
+      "https://soundcloud.com/dylan-ever",
+      "https://soundcloud.com/austin-burkett-270688389",
+      "http://gosborneaudio.com/",
+      "https://madisondenbrockmusic.com/",
+      "http://michellelugomusic.com/",
+      "https://pascalgaroute.com/",
+      "https://youtube.com/c/CandleKing10",
+      "https://www.sydastry.com/",
+      "https://treyrodman.bandcamp.com/",
+      null
+    ]
+  },
+  {
+    "title": "Trailer Editor",
+    "people": ["Benji Operhall"],
+    "links": ["https://twitter.com/BenjiVon1"]
+  }
+]

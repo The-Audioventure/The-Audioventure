@@ -17,35 +17,35 @@ import TextBanner from "../components/TextBanner";
 
 const ICONS = {
   Back: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/back.png",
+    uri: AppConstants.assetsDomain + "assets/back.png",
     name: "Back",
   },
   Pumped: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/pumped.png",
+    uri: AppConstants.assetsDomain + "assets/pumped.png",
     name: "Pumped",
   },
   Lazy: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/lazy.png",
+    uri: AppConstants.assetsDomain + "assets/lazy.png",
     name: "Lazy",
   },
   Happy: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/happy.png",
+    uri: AppConstants.assetsDomain + "assets/happy.png",
     name: "Happy",
   },
   Weird: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/weird.png",
+    uri: AppConstants.assetsDomain + "assets/weird.png",
     name: "Weird",
   },
   Sad: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/sad.png",
+    uri: AppConstants.assetsDomain + "assets/sad.png",
     name: "Sad",
   },
   Romantic: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/romance.png",
+    uri: AppConstants.assetsDomain + "assets/romance.png",
     name: "Romantic",
   },
   Random: {
-    uri: "https://the-audioventure.github.io/CYOA-Assets/assets/random.png",
+    uri: AppConstants.assetsDomain + "assets/random.png",
     name: "Random",
   },
 };

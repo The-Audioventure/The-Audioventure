@@ -1,12 +1,16 @@
 const GOOGLE_DOCS_TEXT_CONVERSION_RATIO = 2;
 
+const LOCAL_ASSETS_DOMAIN = "https://yahiyahussain.github.io/CYOA-Assets/";
+const GITHUB_ASSETS_DOMAIN = "https://yahiyahussain.github.io/CYOA-Assets/";
+export const ASSETS_DOMAIN = LOCAL_ASSETS_DOMAIN;
+
 const getUri = function (fileName) {
   return {
-    uri: `https://the-audioventure.github.io/CYOA-Assets/assets/${fileName}`,
+    uri: `${ASSETS_DOMAIN}/assets/${fileName}`,
   };
 };
 const getUrl = function (fileName) {
-  return `https://the-audioventure.github.io/CYOA-Assets/assets/${fileName}`;
+  return `${ASSETS_DOMAIN}/assets/${fileName}`;
 };
 
 const getRawUri = function (fileName) {
@@ -24,14 +28,14 @@ const createColorTheme = function (textColor, borderColor, backgroundColor) {
 };
 
 const AppConstants = {
+  assetsDomain: ASSETS_DOMAIN,
   backgroundColor: "black",
   // HomeScreenImage: {height: 2880, width: 5120, src: getUri("031_cover_noword.png")},
   HomeScreenImage: {
     height: 2880,
     width: 5120,
     src: {
-      uri:
-        "https://the-audioventure.github.io/CYOA-Assets/assets/031_cover_kstr2.png",
+      uri: `${ASSETS_DOMAIN}/assets/031_cover_kstr2.png`,
     },
   },
 

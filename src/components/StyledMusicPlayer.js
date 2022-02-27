@@ -139,7 +139,7 @@ export default class StyledMusicPlayer extends React.Component {
       const currentSecond = Math.floor(status.positionMillis / 1000);
       const currentZeroPad = currentSecond < 10 ? "0" : "";
       const maxMinute = Math.round(status.durationMillis / (60 * 1000));
-      const maxSecond = Math.floor(status.durationMillis / 1000);
+      const maxSecond = Math.floor(status.durationMillis / 1000) % 60;
       const maxZeroPad = maxSecond < 10 ? "0" : "";
 
       this.setState({
