@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/The-Audioventure/static/js/app.2093eea3.chunk.js",
-    "app.js.map": "/The-Audioventure/static/js/app.2093eea3.chunk.js.map",
+    "app.js": "/The-Audioventure/static/js/app.33eb7d7f.chunk.js",
+    "app.js.map": "/The-Audioventure/static/js/app.33eb7d7f.chunk.js.map",
     "runtime~app.js": "/The-Audioventure/static/js/runtime~app.f58e92da.js",
     "runtime~app.js.map": "/The-Audioventure/static/js/runtime~app.f58e92da.js.map",
     "static/js/2.0bbd144c.chunk.js": "/The-Audioventure/static/js/2.0bbd144c.chunk.js",
@@ -35,6 +35,6 @@
   "entrypoints": [
     "static/js/runtime~app.f58e92da.js",
     "static/js/2.0bbd144c.chunk.js",
-    "static/js/app.2093eea3.chunk.js"
+    "static/js/app.33eb7d7f.chunk.js"
   ]
 }
